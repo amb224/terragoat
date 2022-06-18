@@ -18,3 +18,12 @@ resource "aws_s3_bucket" "docking_bay" {
     yor_trace            = "ad0604d4-9dd7-47b7-9238-1fc70405554a"
   }
 }
+
+
+resource "aws_s3_bucket_versioning" "docking_bay" {
+  bucket = aws_s3_bucket.docking_bay.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
