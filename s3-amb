@@ -1,0 +1,4 @@
+resource "aws_s3_bucket" "storage_test100"{
+  bucket = "AMB-test1"
+  acl    = "public"
+  }
